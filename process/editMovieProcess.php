@@ -12,23 +12,23 @@ if (isset($_POST['editMovie'])) {
     $query = mysqli_query(
         $con,
         "UPDATE movies SET name = '$name', genre = '$genre', 
-        realese = '$realese', season = '$season', synopsis = '$synopsis' WHERE id='$id'"
-    )or die(mysqli_error($con)); 
+        realese = '$realese', season = '$season', synopsis = '$synopsis' WHERE id='$id'")
+        or die(mysqli_error($con)); 
 
     if ($query) {
         echo
-        '<script>
+            '<script>
             alert("Edit Movies Success!"); window.location = "../page/listMoviesPage.php"
             </script>';
     } else {
         echo
-        '<script>
+            '<script>
             alert("Edit Movies Failed!");
             </script>';
     }
 } else {
     echo
-    '<script>
- window.history.back()
- </script>';
+        '<script>
+        window.history.back()
+        </script>';
 }
