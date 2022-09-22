@@ -21,7 +21,7 @@
             echo
                 '<script>
                 alert("Email not found!"); window.location = "../page/loginPage.php"
-                </script>'; 
+                </script>';
         }else{
             $user = mysqli_fetch_assoc($query);
             if(password_verify($password, $user['password'])){

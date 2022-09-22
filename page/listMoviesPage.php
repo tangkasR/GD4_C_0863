@@ -6,6 +6,9 @@
     0.19);" >
         <div class="body d-flex justify-content-between">
             <h4>LIST MOVIE</h4>
+            <a href="../page/addMoviePage.php">
+                <i style="color: blue" class="fa fa-plus fa-2x"></i>
+            </a>
         </div>
         <hr>
         <table class="table ">
@@ -35,6 +38,10 @@
                                 <td>'.$data['realese'].'</td>
                                 <td>'.$data['season'].'</td>
                                 <td>
+                                    <a href="../page/editMoviesPage.php?id='.$data['id'].'" 
+                                    onClick="return confirm(\'Yakin mau edit data?\')">
+                                        <i style="color: gray" class="fa fa-edit fa-2x"></i>
+                                    </a>
                                     <a href="../process/deleteMovieProcess.php?id='.$data['id'].'" 
                                         onClick="return confirm ( \'Are you sure want to delete this 
                                         data?\')">
